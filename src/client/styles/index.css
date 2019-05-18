@@ -1,66 +1,71 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Ubuntu:300,300i,400,400i,500,500i,700,700i&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
 body {
   margin: 0;
   padding: 0;
+  font-size: 14px;
   font-family: 'Ubuntu', sans-serif;
-  background: white;
 }
 
-h2 {
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
+body > div > section {
+  display: flex;
+  flex-direction: column;
 }
 
-section {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
+a {
+  text-decoration: none;
+  display: block;
 }
 
 header {
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid black;
-  padding: 25px;
-}
-
-.header-links {
+  justify-content: space-evenly;
+  flex-direction: row;
+  background-color: rgb(47, 54, 74);
   align-items: center;
-  display: flex;
-  justify-content: space-between;
-  font-size: 18px;
-}
-
-.header-links a {
-  color: black;
-}
-
-.header-links a::before {
-  content: "» ";
-  margin-left: 25px;
-}
-
-.title {
-  font-weight: 700;
-  font-size: 25px;
-  font-family: 'Playfair Display', serif;
 }
 
 .title a {
-  color: black;
-  text-decoration: none;
+  color:rgb(255,255,255);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
-.subtitle {
-  color: gray;
+.header-links {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.header-links a {
+  color: rgba(120, 130, 157, 0.8);
+  padding: 20px 10px;
 }
 
 .main {
-  padding-top: 25px;
+  flex: 1 0 auto;
 }
 
-.main img {
-  width: 100%;
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(24, 30, 44);
+}
+
+footer section {
+  padding: 20px 0;
+}
+
+footer section:last-child {
+  padding-top: 0;
+}
+
+footer section p {
+  color: rgba(120, 130, 157, 0.8);
 }
 
 .login-container {

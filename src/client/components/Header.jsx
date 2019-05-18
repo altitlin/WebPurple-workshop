@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const Header = ({ title, subtitle, links = [] }) => (
+export const Header = ({ title, links = [] }) => (
   <header>
     <div className="header-titles">
       {title ? <div className="title"><Link to="/">{title}</Link></div> : null}
-      {subtitle ? <div className="subtitle">{subtitle}</div> : null}
     </div>
     <div className="header-links">
       {links.map(({ url, label }, index) => (url[0] === '/' ?

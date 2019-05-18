@@ -1,0 +1,9 @@
+.film {
+    flex: 1 0 auto;
+}
+
+.film section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
