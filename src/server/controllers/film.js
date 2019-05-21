@@ -1,7 +1,4 @@
-import fetch from 'node-fetch';
 import Film from '../models/film';
-// import User from '../models/user';
-import config from '../config/';
 
 // спросить!!!
 export async function create(req, res, next) {
@@ -40,9 +37,9 @@ export async function getAll(req, res, next) {
             message
         });
     }
-  
-    res.films = films;
-    next();
+
+    res.send(films);
+    // next();
 }
 
 export async function deleteFilm(req, res, next) {

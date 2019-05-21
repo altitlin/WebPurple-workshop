@@ -1,7 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
 
 const GenreSchema = new Schema({
-    genreName: {type: String, required: true},
+    title: {type: String, required: true},
     description: {type: String, required: true}
 });
 

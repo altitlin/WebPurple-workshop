@@ -1,20 +1,16 @@
 import React from 'react';
 import '../../styles/film.css';
 
-export const Film = ({ filmName, country, rating, duration }) => (
-  <div className="film">
-    <section>
-      <article>
-        <figure>
-          <img alt={filmName}/>
-          <figcaption>{filmName}</figcaption>
-        </figure>
-        <span>{country}</span>
-        <div>
-          <span className="rating">{rating}</span>
-          <span className="time">{duration} мин</span>
-        </div>
-      </article>
-    </section>
-  </div>
+export const Film = ({ title, country, rating, duration, img }) => (
+  <article>
+    <figure>
+      <img src={img} alt={title}/>
+      <figcaption>{title}</figcaption>
+    </figure>
+    <span className="country">{country}</span>
+    <div>
+      <span className="rating">{rating} звезд</span>
+      <span className="time">{duration} мин</span>
+    </div>
+  </article>
 );

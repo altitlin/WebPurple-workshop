@@ -41,8 +41,8 @@ export async function getAll(req, res, next) {
         });
     }
   
-    res.films = films;
-    next();
+    res.send(genres);
+    //next();
 }
 
 export async function deleteGenre(req, res, next) {

@@ -41,8 +41,8 @@ export async function getAll(req, res, next) {
         });
     }
   
-    res.directors = directors;
-    next();
+    res.send(directors);
+    //next();
 }
 
 export async function deleteDirector(req, res, next) {

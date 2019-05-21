@@ -1,9 +1,49 @@
-.film {
-    flex: 1 0 auto;
-}
-
-.film section {
+main div {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+main > div > article {
+    flex-basis: 300px;
+    margin-bottom: 20px;
+}
+
+article figure {
+    margin: 0;
+}
+
+article img {
+    width: 200px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+article figcaption {
+    color: rgb(68, 76, 99);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+article .country {
+    display: block;
+    color: rgb(111, 125, 149);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+article div { 
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+article .rating {
+    flex-grow: 1;
+}
+
+article .time {
+    flex-grow: 1;
+    order: -1;
 }
