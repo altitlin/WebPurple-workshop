@@ -1,9 +1,8 @@
 import React from 'react';
-import { PostsList } from './posts/PostsList';
+import { FilmList } from './films/FilmList';
 
-export const MainPage = ({ img, posts }) => (
+export const MainPage = ({ films }) => (
   <div className="main">
-    <img src={img} alt="logo" />
-    <PostsList posts={posts} />
+    <FilmList films={films} />
   </div>
 );

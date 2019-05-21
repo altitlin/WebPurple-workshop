@@ -8,10 +8,10 @@ import cors from 'cors';
 import fetch from 'node-fetch';
 
 import config from './config';
-import authRoute from './routes/auth';
-import postRoute from './routes/post';
+import filmRouter from './routes/film';
+import genreRouter from './routes/genre';
+import directorRoute from './routes/director';
 import errorHandler from './middlewares/errorHandler';
-import markdownConvert from './middlewares/markdownConvert';
 
 import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';
@@ -55,8 +55,9 @@ if (isProd) {
   app.use(webpackHotMiddleware(compiler));
 }
 app.use(express.static('public'));
-app.use('/api', authRoute);
-app.use('/api', postRoute, markdownConvert);
+app.use('/api', filmRouter)
+app.use('/api', genreRouter)
+app.use('/api', directorRoute)
 app.use('*', async (req, res) => {
   const indexPage = await fetch(req.protocol + '://' + req.get('host'))
     .then(async (response) => response.text())

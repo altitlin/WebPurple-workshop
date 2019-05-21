@@ -1,190 +1,77 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Ubuntu:300,300i,400,400i,500,500i,700,700i&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-size: 14px;
   font-family: 'Ubuntu', sans-serif;
-  background: white;
 }
 
-h2 {
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
+body > div > section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-section {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
+a {
+  text-decoration: none;
+  display: block;
 }
 
 header {
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid black;
-  padding: 25px;
-}
-
-.header-links {
+  justify-content: space-evenly;
+  flex-direction: row;
+  background-color: rgb(47, 54, 74);
   align-items: center;
-  display: flex;
-  justify-content: space-between;
-  font-size: 18px;
-}
-
-.header-links a {
-  color: black;
-}
-
-.header-links a::before {
-  content: "» ";
-  margin-left: 25px;
-}
-
-.title {
-  font-weight: 700;
-  font-size: 25px;
-  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
 }
 
 .title a {
-  color: black;
-  text-decoration: none;
+  color:rgb(255,255,255);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
-.subtitle {
-  color: gray;
-}
-
-.main {
-  padding-top: 25px;
-}
-
-.main img {
-  width: 100%;
-}
-
-.login-container {
-  width: 400px;
-  margin: 50px auto;
-}
-
-.login-error {
-  color: red;
-}
-
-.login-form input {
-  width: 75%;
-  text-align: center;
-  margin: 5px auto;
-  display: block;
-  padding: 5px;
-}
-
-.panel-container {
-  width: 600px;
-  margin: auto;
-}
-
-.panel-container__post {
+.header-links {
   display: flex;
-  border-bottom: 1px dashed grey;
+  justify-content: flex-start;
+  flex-direction: row;
 }
 
-.panel-container__post .post {
-  width: 80%;
+.header-links a {
+  color: rgba(120, 130, 157, 0.8);
+  padding: 20px 10px;
 }
 
-.panel-container__buttons {
+main {
+  flex: 1 0 auto;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+footer {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
+  background-color: rgb(24, 30, 44);
 }
 
-.panel-container__buttons a {
-  color: black;
-  text-decoration: underline;
-  cursor: pointer;
+footer section {
+  padding: 20px 0;
 }
 
-.post-edit {
-  display: flex;
-  justify-content: center;
+footer section:last-child {
+  padding-top: 0;
 }
 
-.post-edit label {
-  display: flex;
-  justify-content: space-between;
-  margin: 7px 0;
-}
-
-.post-edit input[type="submit"] {
-  float: right;
-  margin-top: 7px;
-  background: white;
-  border-radius: 0;
-  color: black;
-  cursor: pointer;
-}
-
-.post-edit__title {
-  width: 409px;
-  margin: 7px 0;
-}
-
-.post-edit__title input {
-  width: 350px;
-}
-
-.post-edit__url {
-  width: 412px;
-  margin: 7px 0;
-}
-
-.post-edit__url input {
-  width: 350px;
-}
-
-.post-edit__preview {
-  display: block;
-  float: right;
-  margin: 0 !important;
-}
-
-.post-edit__preview input {
-  margin-left: 5px;
-}
-
-.post-edit__previewBlock {
-  width: 820px;
-  border: 1px dashed grey;
-  padding: 0;
-}
-
-.panel-container__newPost {
-  margin-top: 20px;
-  display: block;
-  position: fixed;
-  left: 72px;
-  padding: 7px;
-  border: 1px dashed grey;
-  text-decoration: none;
-  color: black;
-}
-
-@media screen and (max-width: 660px) {
-  header {
-    display: block;
-  }
-
-  .header-links {
-    display: block;
-  }
-
-  .header-links a {
-    display: block;
-  }
-
-  .main {
-    padding-top: 0;
-  }
+footer section p {
+  color: rgba(120, 130, 157, 0.8);
 }
